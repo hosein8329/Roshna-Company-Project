@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMI xmi.version="1.2" xmlns:UML="org.omg.xmi.namespace.UML">
+  <UML:Model name="OilChangeSystem_Complete">
+
+   
+    <UML:Actor xmi.id="Customer" name="مشتری"/>
+    <UML:Actor xmi.id="Employee" name="مسئول تعویض روغنی"/>
+    <UML:Actor xmi.id="Supplier" name="تأمین‌کننده روغن"/>
+
+   
+    <UML:UseCase xmi.id="UC1" name="ثبت مشخصات مشتری"/>
+    <UML:UseCase xmi.id="UC2" name="پذیرش خودرو"/>
+    <UML:UseCase xmi.id="UC3" name="انتخاب روغن موتور، روغن گیربکس و فیلترها"/>
+    <UML:UseCase xmi.id="UC4" name="تعویض روغن موتور، روغن گیربکس و فیلترها"/>
+    <UML:UseCase xmi.id="UC5" name="ثبت سرویس"/>
+    <UML:UseCase xmi.id="UC6" name="صدور فاکتور"/>
+    <UML:UseCase xmi.id="UC7" name="مدیریت موجودی روغن و فیلترها"/>
+    <UML:UseCase xmi.id="UC8" name="ثبت سفارش خرید روغن و فیلترها"/>
+
+   
+    <UML:Association xmi.id="Customer_UC1">
+      <UML:AssociationEnd participant="Customer"/>
+      <UML:AssociationEnd participant="UC1"/>
+    </UML:Association>
+
+    <UML:Association xmi.id="Customer_UC2">
+      <UML:AssociationEnd participant="Customer"/>
+      <UML:AssociationEnd participant="UC2"/>
+    </UML:Association>
+
+    <UML:Association xmi.id="Customer_UC6">
+      <UML:AssociationEnd participant="Customer"/>
+      <UML:AssociationEnd participant="UC6"/>
+    </UML:Association>
+
+    <UML:Association xmi.id="Employee_UC2">
+      <UML:AssociationEnd participant="Employee"/>
+      <UML:AssociationEnd participant="UC2"/>
+    </UML:Association>
+
+    <UML:Association xmi.id="Employee_UC3">
+      <UML:AssociationEnd participant="Employee"/>
+      <UML:AssociationEnd participant="UC3"/>
+    </UML:Association>
+
+    <UML:Association xmi.id="Employee_UC4">
+      <UML:AssociationEnd participant="Employee"/>
+      <UML:AssociationEnd participant="UC4"/>
+    </UML:Association>
+
+    <UML:Association xmi.id="Employee_UC5">
+      <UML:AssociationEnd participant="Employee"/>
+      <UML:AssociationEnd participant="UC5"/>
+    </UML:Association>
+
+    <UML:Association xmi.id="Employee_UC6">
+      <UML:AssociationEnd participant="Employee"/>
+      <UML:AssociationEnd participant="UC6"/>
+    </UML:Association>
+
+    <UML:Association xmi.id="Employee_UC7">
+      <UML:AssociationEnd participant="Employee"/>
+      <UML:AssociationEnd participant="UC7"/>
+    </UML:Association>
+
+    <UML:Association xmi.id="Employee_UC8">
+      <UML:AssociationEnd participant="Employee"/>
+      <UML:AssociationEnd participant="UC8"/>
+    </UML:Association>
+
+    <UML:Association xmi.id="Supplier_UC8">
+      <UML:AssociationEnd participant="Supplier"/>
+      <UML:AssociationEnd participant="UC8"/>
+    </UML:Association>
+
+   
+    <UML:Component xmi.id="ClientApp" name="نرم‌افزار/Client"/>
+    <UML:Component xmi.id="Database" name="سرور/Database"/>
+
+    
+    <UML:Association xmi.id="Customer_ClientApp">
+      <UML:AssociationEnd participant="Customer"/>
+      <UML:AssociationEnd participant="ClientApp"/>
+    </UML:Association>
+
+    <UML:Association xmi.id="ClientApp_Database">
+      <UML:AssociationEnd participant="ClientApp"/>
+      <UML:AssociationEnd participant="Database"/>
+    </UML:Association>
+
+  </UML:Model>
+</XMI>
